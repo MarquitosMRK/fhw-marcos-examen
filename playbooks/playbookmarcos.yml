@@ -1,0 +1,17 @@
+---
+- name: crear usuarios
+  hosts: user
+  become: true
+  tasks:
+  - name: crear grup
+    ansible.builtin.group:
+      name: user
+      state: present
+  - name: crear user 
+    user:
+      name: '{{ name }}'
+      password: 12345678
+      group: user
+      home: /users/'{{ home }}'
+  roles:
+    - web

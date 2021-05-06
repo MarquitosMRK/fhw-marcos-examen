@@ -1,0 +1,8 @@
+PASOS PARA LOGEAR SIN CONTRASEÑA
+
+1. GENERAR CLAVE PUBLICA
+    ssh-keygen -b 4096 -t rsa
+2. COPIARLA AL NODE ONE
+    ssh-copy-id admin@node-one
+3. COMPROVAR (desde el controller)
+    ssh admin@node-one

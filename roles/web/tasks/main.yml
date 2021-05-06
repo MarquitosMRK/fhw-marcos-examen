@@ -1,0 +1,7 @@
+---
+- name: upgrade fonts
+  apt:
+    update_cache: yes   
+- name: upgrade packages
+  apt:
+    upgrade: dist

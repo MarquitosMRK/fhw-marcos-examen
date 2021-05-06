@@ -1,0 +1,7 @@
+---
+- name: copiar archivo
+  copy:
+    src: /home/vagrant/examen/archivo.txt
+    dest: /tmp/'{{ home }}'
+    owner: vagrant
+    group: user
